@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header";
+import { animateScroll as scroll } from "react-scroll";
 import {
   UpSquareFilled,
   MailOutlined,
@@ -20,7 +21,7 @@ function App() {
     <div className="app">
       <Header />
       <main className="main">
-        <section className="about">
+        <section className="about" name="about">
           <h2 className="about__title">Who am I?</h2>
           <p className="about__text">
             An up and coming web developer. Always learning and expending my
@@ -138,8 +139,13 @@ function App() {
             </a>
           </li>
         </ul>
-
-        <UpSquareFilled style={arrowStyles} className="footer__arrow" />
+        <div className="footer__container">
+          <UpSquareFilled
+            style={arrowStyles}
+            className="footer__arrow"
+            onClick={() => scroll.scrollToTop()}
+          />
+        </div>
       </footer>
     </div>
   );
