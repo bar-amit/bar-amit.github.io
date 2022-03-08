@@ -37,9 +37,14 @@ function App() {
                 <p className="projects__description">
                   A landing page for a fictional resturant.
                 </p>
-                <button className="projects__button" type="button">
+                <a
+                  className="projects__button"
+                  href="https://github.com/bar-amit/home-kitchen"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   See more
-                </button>
+                </a>
               </div>
             </li>
             <li className="projects__item projects__item_name_around">
@@ -48,9 +53,14 @@ function App() {
                 <p className="projects__description">
                   A instagram-like website.
                 </p>
-                <button className="projects__button" type="button">
+                <a
+                  className="projects__button"
+                  href="https://github.com/bar-amit/react-around-api-full"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   See more
-                </button>
+                </a>
               </div>
             </li>
             <li className="projects__item projects__item_name_2048">
@@ -60,9 +70,14 @@ function App() {
                   This project is a game called 2048. If you don't know it you
                   could give it a try.
                 </p>
-                <button className="projects__button" type="button">
+                <a
+                  className="projects__button"
+                  href="https://github.com/bar-amit/2048-react"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   See more
-                </button>
+                </a>
               </div>
             </li>
             <li className="projects__item projects__item_name_news-explorer">
@@ -71,9 +86,14 @@ function App() {
                 <p className="projects__description">
                   In this app the user can search for news and save articles.
                 </p>
-                <button className="projects__button" type="button">
+                <a
+                  className="projects__button"
+                  href="https://github.com/bar-amit/news-explorer-frontend"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   See more
-                </button>
+                </a>
               </div>
             </li>
             <li className="projects__item projects__item_name_route-66">
@@ -83,9 +103,14 @@ function App() {
                   Route 66 has beautiful views. This landing page presents some
                   of them.
                 </p>
-                <button className="projects__button" type="button">
+                <a
+                  className="projects__button"
+                  href="https://github.com/bar-amit/web_project_3"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   See more
-                </button>
+                </a>
               </div>
             </li>
             {/* <li className="projects__item">
