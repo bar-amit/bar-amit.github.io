@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Mono:wght@700&family=Source+Sans+Pro&display=swap");
+
+.header {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 40px;
+  font-family: "Roboto Mono", serif;
+}
+
+.header__highlight {
+  font-family: "Alfa Slab One", sans-serif;
+  color: blueviolet;
+}
+
+.header__description {
+  font-size: 25px;
+  font-family: "Roboto Mono", serif;
+}
+
+.header__button {
+  background: none;
+  border: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-size: 18px;
+  font-family: "Roboto Mono", serif;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+}
+
+.header__button:hover {
+  background-color: blueviolet;
+  color: white;
+  border: 0;
+}
