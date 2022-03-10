@@ -17,6 +17,7 @@ var projects = [
     image: homeKitchenImage,
     github: "https://github.com/bar-amit/home-kitchen",
     app: "https://bar-amit.github.io/home-kitchen/",
+    technologies: ["css", "html", "javascript"],
     additionalLinks: [{ href: "", text: "" }],
   },
   {
@@ -30,6 +31,7 @@ var projects = [
     image: aroundImage,
     github: "https://github.com/bar-amit/react-around-api-full",
     app: "https://bar-around.students.nomoreparties.sbs/",
+    technologies: ["react", "node", "mongo"],
     additionalLinks: [{ href: "", text: "" }],
   },
   {
@@ -43,6 +45,7 @@ var projects = [
     image: twoThousandFortyEightImage,
     github: "https://github.com/bar-amit/2048-react",
     app: "https://bar-amit.github.io/2048-react/",
+    technologies: ["react", "javascript"],
   },
   {
     name: "news explorer",
@@ -56,6 +59,7 @@ var projects = [
     image: newsExplorerImage,
     github: "https://github.com/bar-amit/news-explorer-frontend",
     app: "https://www.bar-news-explorer.students.nomoreparties.sbs",
+    technologies: ["react", "node", "mongo"],
   },
   {
     name: "route 66",
@@ -69,6 +73,7 @@ var projects = [
     image: route66Image,
     github: "https://github.com/bar-amit/web_project_3",
     app: "https://bar-amit.github.io/web_project_3",
+    technologies: ["css", "html"],
   },
 ];
 

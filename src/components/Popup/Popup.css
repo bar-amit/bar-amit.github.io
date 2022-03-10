@@ -22,13 +22,14 @@
 .popup__container {
   position: relative;
   width: 60%;
-  height: 60%;
   padding: 20px;
   border: 3px solid blueviolet;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   font-size: 23px;
   font-family: "Roboto Mono", serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .popup__close-button {
@@ -53,6 +54,11 @@
   text-transform: capitalize;
 }
 
+.popup__content {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .popup__highlight {
   color: blueviolet;
 }
@@ -60,6 +66,7 @@
 .popup__link {
   text-decoration: none;
   background: none;
+  margin: 0;
   border: 0;
   border: 2px solid blueviolet;
   cursor: pointer;
@@ -81,4 +88,16 @@
   background-color: blueviolet;
   color: white;
   border-color: blueviolet;
+}
+
+.popup__icon {
+  color: blueviolet;
+  font-size: 50px;
+}
+
+.popup__tech-icons {
+  max-width: 500px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
 }
