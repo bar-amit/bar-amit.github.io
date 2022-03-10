@@ -53,6 +53,10 @@
   text-transform: capitalize;
 }
 
+.popup__highlight {
+  color: blueviolet;
+}
+
 .popup__link {
   text-decoration: none;
   background: none;

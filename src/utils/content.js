@@ -12,7 +12,7 @@ var projects = [
     This project was made as a colabaration during a hackaton.
     It's a simple landing page for a fictional resturant. In the website
     you can look through a menu and read about the resturant and its stuff.
-    Building this project we've used HTML, CSS and vanilla Javascript.
+    Building this project we've used *HTML*, *CSS* and *Vanilla Javascript*.
     `,
     image: homeKitchenImage,
     github: "https://github.com/bar-amit/home-kitchen",
@@ -25,7 +25,7 @@ var projects = [
     content: `
     I made this project during a Practicum web development course. This is an Instagram-like website.
     In the app, a signed user can post pictures to the feed. Every user can like other users' posts.
-    The front-end app is built with React and the back-end is built with Express and MongoDB.
+    The front-end app is built with *React* and the back-end is built with *Express* and *MongoDB*.
     `,
     image: aroundImage,
     github: "https://github.com/bar-amit/react-around-api-full",
@@ -38,7 +38,7 @@ var projects = [
       "This project is a game called 2048. If you don't know it you could give it a try.",
     content: `
     This project is a game called 2048. If you don't know it you could give it a try.
-    The app was built using React.
+    The app was built using *React*.
     `,
     image: twoThousandFortyEightImage,
     github: "https://github.com/bar-amit/2048-react",
@@ -50,8 +50,8 @@ var projects = [
     content: `
     In this app the user can search for news and save articles. The save news stories
     are sorted by keywords. I made this project during a Practicum web development
-    course. The front-end is built with React. The news articles are fetch from a
-    third party API. The user data is save on a back-end built with Express and MongoDB.
+    course. The front-end is built with *React*. The news articles are fetch from a
+    third party API. The user data is save on a back-end built with *Express* and *MongoDB*.
     `,
     image: newsExplorerImage,
     github: "https://github.com/bar-amit/news-explorer-frontend",
@@ -64,7 +64,7 @@ var projects = [
     content: `
     Route 66 has beautiful views. This landing page presents some of them.
     I made this project during a Practicum web development course.
-    It was built using HTML and CSS.
+    It was built using *HTML* and *CSS*.
     `,
     image: route66Image,
     github: "https://github.com/bar-amit/web_project_3",
