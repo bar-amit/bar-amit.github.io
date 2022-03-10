@@ -4,6 +4,8 @@ import twoThousandFortyEightImage from "../images/2048.jpg";
 import newsExplorerImage from "../images/news-explorer.jpg";
 import route66Image from "../images/route-66.jpg";
 
+// technologies : react, javascript, node, css, html, mongo
+
 var projects = [
   {
     name: "home kitchen",
