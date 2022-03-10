@@ -1,4 +1,7 @@
+import React from "react";
 import Header from "./components/Header/Header";
+import Popup from "./components/Popup/Popup";
+import Project from "./components/Project/Project";
 import { animateScroll as scroll } from "react-scroll";
 import {
   UpSquareFilled,
@@ -6,9 +9,17 @@ import {
   LinkedinOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import { projects } from "./utils/content";
 import "./App.css";
 
 function App() {
+  const [popup, setPopup] = React.useState({ isOpen: false, data: null });
+  const openPopup = (data) => setPopup({ isOpen: true, data });
+  const closePopup = () =>
+    setPopup((s) => {
+      return { ...s, isOpen: false };
+    });
+
   var iconStyles = {
     color: "blueviolet",
     fontSize: "50px",
@@ -17,8 +28,21 @@ function App() {
     color: "blueviolet",
     fontSize: "70px",
   };
+
+  React.useEffect(() => {
+    function handleEscape(e) {
+      if (e.key === "Escape") {
+        closePopup();
+      }
+    }
+    document.addEventListener("keydown", handleEscape);
+
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, []);
+
   return (
     <div className="app">
+      <Popup {...popup.data} isOpen={popup.isOpen} onClose={closePopup} />
       <Header />
       <main className="main">
         <section className="about" name="about">
@@ -31,100 +55,13 @@ function App() {
         <section className="projects">
           <h2 className="projects__title">My Works</h2>
           <ul className="projects__container">
-            <li className="projects__item projects__item_name_home-kitchen">
-              <div className="projects__card">
-                <h3 className="projects__project-name">home kitchen</h3>
-                <p className="projects__description">
-                  A landing page for a fictional resturant.
-                </p>
-                <a
-                  className="projects__button"
-                  href="https://github.com/bar-amit/home-kitchen"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  See more
-                </a>
-              </div>
-            </li>
-            <li className="projects__item projects__item_name_around">
-              <div className="projects__card">
-                <h3 className="projects__project-name">around the states</h3>
-                <p className="projects__description">
-                  A instagram-like website.
-                </p>
-                <a
-                  className="projects__button"
-                  href="https://github.com/bar-amit/react-around-api-full"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  See more
-                </a>
-              </div>
-            </li>
-            <li className="projects__item projects__item_name_2048">
-              <div className="projects__card">
-                <h3 className="projects__project-name">2048</h3>
-                <p className="projects__description">
-                  This project is a game called 2048. If you don't know it you
-                  could give it a try.
-                </p>
-                <a
-                  className="projects__button"
-                  href="https://github.com/bar-amit/2048-react"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  See more
-                </a>
-              </div>
-            </li>
-            <li className="projects__item projects__item_name_news-explorer">
-              <div className="projects__card">
-                <h3 className="projects__project-name">news explorer</h3>
-                <p className="projects__description">
-                  In this app the user can search for news and save articles.
-                </p>
-                <a
-                  className="projects__button"
-                  href="https://github.com/bar-amit/news-explorer-frontend"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  See more
-                </a>
-              </div>
-            </li>
-            <li className="projects__item projects__item_name_route-66">
-              <div className="projects__card">
-                <h3 className="projects__project-name">route 66</h3>
-                <p className="projects__description">
-                  Route 66 has beautiful views. This landing page presents some
-                  of them.
-                </p>
-                <a
-                  className="projects__button"
-                  href="https://github.com/bar-amit/web_project_3"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  See more
-                </a>
-              </div>
-            </li>
-            {/* <li className="projects__item">
-              <div className="projects__card">
-                <h3 className="projects__project-name">react name</h3>
-                <p className="projects__description">
-                  This project is described here with some elaboration. Maybe
-                  two lines.
-                </p>
-                <button className="projects__button" type="button">
-                  See more
-                </button>
-              </div>
-            </li> */}
+            {projects.map((p) => (
+              <Project
+                data={p}
+                openPopup={openPopup}
+                key={`projects-item-${p.name}`}
+              />
+            ))}
           </ul>
         </section>
         <div className="separator"></div>
